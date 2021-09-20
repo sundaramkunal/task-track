@@ -50,10 +50,11 @@ class App extends React.Component {
     this.setState({tasks})
   }
   editText=(id,val)=>{
-    const updatedTasks=(this.state.tasks.map((task)=>task.id===id?task.text=val:task.text))
+    
+    const tasks=(this.state.tasks.map((task)=>task.id===id?task.text=val:task.text))
     //console.log(updatedTasks);
     // console.log(this.state.tasks);
-    this.setState({updatedTasks:this.state.tasks})
+    this.setState({tasks})
     //console.log(updatedTasks);
   }
 
@@ -72,7 +73,7 @@ class App extends React.Component {
             />
         ) : (
           'No Tasks To Show'
-        )} 
+        )} {console.log(this.state.tasks)}
       </div>
     );
   }
