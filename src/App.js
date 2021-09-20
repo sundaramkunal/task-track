@@ -41,7 +41,7 @@ class App extends React.Component {
     this.setState(this.state.tasks.filter((task) => task.id !== id))
   }
   toggleReminder = (id) => {
-    console.log(id+'clicked')
+    // console.log(id+'clicked')
     const tasks=this.state.tasks.map((task) =>
     task.id ===id ? {
       ...task, reminder:
@@ -50,9 +50,11 @@ class App extends React.Component {
     this.setState({tasks})
   }
   editText=(id,val)=>{
-    this.state.tasks.map((task)=>task.id===id?task.text=val:task.text)
-    //console.log(id,val);
-    console.log(this.state.tasks);
+    const updatedTasks=(this.state.tasks.map((task)=>task.id===id?task.text=val:task.text))
+    //console.log(updatedTasks);
+    // console.log(this.state.tasks);
+    this.setState({updatedTasks:this.state.tasks})
+    //console.log(updatedTasks);
   }
 
   render() { 
@@ -77,6 +79,11 @@ class App extends React.Component {
 }
  
 export default App ;
+
+
+
+
+//const updatedTasks=(this.state.tasks.map((task)=>task.id===id?task.text=val:task.text))
 
 // const App = () => {
 //   const [tasks, setTasks] = useState()

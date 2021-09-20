@@ -1,6 +1,6 @@
 import Task from './Task';
 const Tasks = ({ tasks, onDelete, onToggle,editTasksText }) => {
-    const list = []
+    const id = 1;
 
   
     return ( 
@@ -20,4 +20,6 @@ const Tasks = ({ tasks, onDelete, onToggle,editTasksText }) => {
 
 export default Tasks
 
-
+/*{console.logtasks.map((task)=>(
+                id===task.id 
+            ))} */
