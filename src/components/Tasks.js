@@ -14,6 +14,9 @@ const Tasks = ({ tasks, onDelete, onToggle,editTasksText }) => {
                     editTasksText={editTasksText}
                 />
             ))}
+            <p>you have {} 2 task left </p>
+            <input type='submit' value='clear all'
+                   className='btn ' />
         </div>
     )
 }

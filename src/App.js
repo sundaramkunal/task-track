@@ -27,9 +27,16 @@ class App extends React.Component {
         day: 'feb 5',
         reminder: true,
       },
-    ]
+    ],
+    showAddTask:false
 
   }
+  chengeShowAddTask= ()=> {
+    const showAddTask=!this.state.showAddTask;
+    this.setState({showAddTask})
+  }
+  
+  
   addTask=(task) =>{
     const id = Math.floor(Math.random()* 10000) + 1
     const newTask = {id,...task}
@@ -51,19 +58,18 @@ class App extends React.Component {
   }
   editText=(id,val)=>{
     
-    const tasks=(this.state.tasks.map((task)=>task.id===id?task.text=val:task.text))
-    //console.log(updatedTasks);
-    // console.log(this.state.tasks);
-    this.setState({tasks})
-    //console.log(updatedTasks);
+    const newtasks=(this.state.tasks.map((task)=>task.id===id?task.text=val:task.text))
+  
+    this.setState({task:newtasks})
+    
   }
 
   render() { 
     return (
       <div className="App" style={{marginLeft:'50px'}}>
         
-        <h1><Header/></h1>
-         <AddTasks onAdd ={this.addTask} />
+        <Header title={'Task Track'}onAdd={this.chengeShowAddTask}/>
+         {this.state.showAddTask && <AddTasks onAdd ={this.addTask} />}
         {this.state.tasks.length > 0 ? (
           <Tasks
             tasks={this.state.tasks}
@@ -73,7 +79,9 @@ class App extends React.Component {
             />
         ) : (
           'No Tasks To Show'
-        )} {console.log(this.state.tasks)}
+        )} 
+        {this.state.tasks.map((item)=>
+        <div>{item.text}</div>)}
       </div>
     );
   }

@@ -14,7 +14,7 @@ const Task = ({ task, onToggle,editTasksText,onDelete }) => {
     const handleClick=()=>{
         setEditable(true)
     }
-    
+
     const handleKeyPress=(e)=>{
         if (e.key === 13 || e.key === "Enter") {
             setEditable(false)
@@ -39,10 +39,11 @@ const Task = ({ task, onToggle,editTasksText,onDelete }) => {
                 onKeyPress={handleKeyPress}
               />)
                 :
-                (<div onDoubleClick={handleClick}>{val}</div>)}
+                (<div onDoubleClick={handleClick}>{task.text}</div>)}
                 
             
             <p>{task.day}</p>
+            
         </div>
     )
 }
