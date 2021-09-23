@@ -1,45 +1,66 @@
-    import {useState} from 'react'
+import { useState } from 'react';
+//import { AiOutlinePlus } from 'react-icons/ai';
+import { BsPlusSquareFill } from 'react-icons/bs';
 
 
-    const AddTasks = ({onAdd}) => {
-        const [text, setText] = useState('')
-        const [day, setDay] = useState('')
-        const [reminder, setReminder] = useState(false)
-        const onSubmit = (e) => {
-            e.preventDefault()
+const AddTasks = ({ onAdd }) => {
+    const [text, setText] = useState('')
+    const [day, setDay] = useState('')
+    const [reminder, setReminder] = useState(false)
+    const onSubmit = (e) => {
+        e.preventDefault()
 
-            if(!text) {
-                alert('Please add a task')
-                return
-            }
-            onAdd({
-                text,
-                day,
-                reminder
-            })
-            
-
-            setText('')
-            setDay('')
-            setReminder(false)
-
+        if (!text) {
+            alert('Please add a task')
+            return
         }
+        onAdd({
+            text,
+            day,
+            reminder
+        })
 
 
-        return (
-            
-            <form className='add-form'onSubmit={(e)=>onSubmit(e)}>
-                <div style = {{width:'25%'}}>
-                <div className='form-control'>
-                    <label>Task</label>
-                        <input
-                            type='text'
-                            placeholder='Add Task'
-                            value = {text} 
-                            onChange ={(e)=> setText(e.target.value)}
-                        />
-                </div>
-                <div className='form-control'>
+        setText('')
+        setDay('')
+        setReminder(false)
+
+    }
+
+
+    return (
+
+        <form onSubmit={onSubmit}>
+
+            <div style={{ display: 'flex' }}>
+                <input
+                    type='text'
+                    placeholder='Add your new todo '
+                    value={text}
+                    onChange={(e) => setText(e.target.value)}
+                />
+
+
+                <button style={{ color: 'rgb(92, 180, 238)', cursor: 'pointer', fontSize: 40, marginLeft: '5px' }}
+                    type='submit'
+                > <BsPlusSquareFill
+                    />
+                </button>
+            </div>
+        </form>
+    )
+}
+
+export default AddTasks
+
+//line 25: 'btn btn-block'
+{/* <input type='submit' value='Save Task' className='btn btn-block' /> */ }
+//onClick={() => onAdd}
+// <AiOutlinePlus
+//                     style={{ color: 'red', cursor: 'pointer' }}
+//                     onClick={() => onAdd}
+//                 />
+{/* <div className='form-control'>
                     <label>Day & Time</label>
                     <input
                         type='text'
@@ -56,16 +77,10 @@
                         value = {reminder} 
                         onChange ={(e)=> setReminder(e.currentTarget.checked)}
                     />
-                </div>
-                </div>
-
-                <input type='submit' value='Save Task'
-                   className='btn ' />
-            </form>
-                
-        )
-    }
-
-   export default AddTasks
-
-    //line 25: 'btn btn-block'
+                    
+                    //<BsPlusSquareFill
+                    style={{ color: 'rgb(92, 180, 238)', cursor: 'pointer', fontSize: 40, marginLeft: '5px' }}
+                    onClick={(e) => setText(e.target.value)}
+                />
+                </div> */
+}

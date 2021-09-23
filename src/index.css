@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,17 +7,19 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: rosybrown;
 }
 
 .container {
   max-width: 500px;
-  margin: 30px auto;
+  margin: 30px auto; /*30px */
   overflow: auto;
   min-height: 300px;
   border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
+  background-color: white;
 }
 
 .header {
@@ -40,6 +42,19 @@ body {
   font-size: 15px;
   font-family: inherit;
 }
+.button {
+  background: rgb(92, 180, 238);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+  float: right;
+}
 
 .btn:focus {
   outline: none;
@@ -59,6 +74,37 @@ body {
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
+}
+
+.clear {
+  background: white;
+  width: 100%;
+
+  padding: 10px 20px;
+  cursor: pointer;
+}
+/* .submit {
+  background-color: red;
+} */
+.clearall {
+  background: rgb(92, 180, 238);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+  float: right;
+}
+.label {
+  text-align: left;
+  float: left;
+  margin-left: 8px;
+  padding:13px;
+  padding-left: 0px;
 }
 
 .task.reminder {
@@ -84,29 +130,36 @@ body {
 }
 
 .form-control input {
-  width: 100%;
+  width: 87%;
   height: 40px;
-  margin: 5px;
   padding: 3px 7px;
   font-size: 17px;
+  margin-left: 7px;
+
+}
+.plusButton{
+  color: 'red';
+   cursor: 'pointer' 
 }
 
-.form-control-check {
+/* .form-control-check {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+} */
 
-.form-control-check label {
-  flex: 1;
+/* .form-control-check label {
+  flex: 2;
+  height: 20px;
 }
 
 .form-control-check input {
   flex: 2;
   height: 20px;
-}
+} */
 
-footer {
-  margin-top: 30px;
-  text-align: center;
+.inputwidth input{
+  height:40px;
+  font-size: 100%;
+  text-align: left;
 }

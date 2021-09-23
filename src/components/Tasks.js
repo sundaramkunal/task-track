@@ -1,12 +1,10 @@
 import Task from './Task';
-const Tasks = ({ tasks, onDelete, onToggle,editTasksText }) => {
-    const id = 1;
+//import 'bootstrap/dist/css/bootstrap.min.css';
+const Tasks = ({ tasks, onDelete, onToggle, editTasksText }) => {
+    return (
+        <div>
 
-  
-    return ( 
-        <div style ={{width:'25%'}}> 
-            
-                {tasks.map((task) => (
+            {tasks.map((task) => (
                 <Task key={task.id}
                     task={task}
                     onDelete={onDelete}
@@ -14,15 +12,48 @@ const Tasks = ({ tasks, onDelete, onToggle,editTasksText }) => {
                     editTasksText={editTasksText}
                 />
             ))}
-            <p>you have {} 2 task left </p>
-            <input type='submit' value='clear all'
-                   className='btn ' />
+
+
         </div>
     )
 }
-
 export default Tasks
 
+
+
+
+
+
+{/* <div >
+
+{/* <div>
+    <label className='label'>you have {value} task left </label>
+</div>
+<div>
+    <button
+        onClick={clearAll}
+        className='clearall'
+    >
+        ClearAll
+    </button>
+</div> */}
+
+{/* <div style={{float:'right'}}> */ }
+
+
+//</div> */}
+// <input type='submit' value='clear all'
+// className='clearall'
+// onClick={clearAll} />
+//{float:'right',width:'10%'}
+//{float:'left', width:'50%',textAlign:'right',paddingTop:'10px'}
 /*{console.logtasks.map((task)=>(
-                id===task.id 
+                id===task.id
             ))} */
+
+            // <input type='submit' value='clear all'
+            //        className='btn ' />
+            // </div>
+            // const val = tasks.filter(task => task.reminder === false)
+            // // console.log(val);
+            // const value = val.length
