@@ -1,8 +1,5 @@
 import { useState } from 'react'
-import { IoMdTrash, IoTrashBinSharp } from 'react-icons/io'
-//import { BsFillPlusCircleFill } from 'react-icons/bs';
-
-
+import { IoMdTrash } from 'react-icons/io'
 const Task = ({ task, onToggle, editTasksText, onDelete }) => {
     const [editable, setEditable] = useState(false)
     const [val, setValue] = useState(task.text)
@@ -35,7 +32,7 @@ const Task = ({ task, onToggle, editTasksText, onDelete }) => {
 
             >
 
-                <div>
+                <h3>
                     <div>
                         {editable ? (
                             <div className="inputwidth">
@@ -52,13 +49,16 @@ const Task = ({ task, onToggle, editTasksText, onDelete }) => {
 
                     </div>
                     <div>
-                        <IoMdTrash
-                            style={{ color: 'red', cursor: 'pointer', fontSize: '40px' }}
-                            onClick={() => onDelete(task.id)}
-                        />
+                        <button class="delete">
+                            <IoMdTrash
+
+                                onClick={() => onDelete(task.id)}
+                            />
+                        </button>
+
                     </div>
 
-                </div>
+                </h3>
 
 
 
@@ -76,7 +76,7 @@ export default Task
 
 //<h3> Lets go for a <FaBeer />? </h3>
 
-
+// Iomdtrash style={{ color: 'red', cursor: 'pointer', fontSize: '40px' }}
 //<p>{task.day}</p>
 //import { FaTimes } from 'react-icons/fa'
 //<h3> Lets go for a < BsFillPlusCircleFill/>? </h3>

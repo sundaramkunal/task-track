@@ -7,8 +7,9 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: rosybrown;
+  font-family: sans-serif;
+  background-color:#56a7de;
+
 }
 
 .container {
@@ -42,19 +43,7 @@ body {
   font-size: 15px;
   font-family: inherit;
 }
-.button {
-  background: rgb(92, 180, 238);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 15px;
-  font-family: inherit;
-  float: right;
-}
+
 
 .btn:focus {
   outline: none;
@@ -72,7 +61,11 @@ body {
 .task {
   background: #f4f4f4;
   margin: 5px;
-  padding: 10px 20px;
+  margin-bottom: 10px;
+  padding-right: 0px;
+  padding-left: 8px;
+  padding-bottom: 0px;
+  padding-top: 4px;
   cursor: pointer;
 }
 
@@ -83,11 +76,9 @@ body {
   padding: 10px 20px;
   cursor: pointer;
 }
-/* .submit {
-  background-color: red;
-} */
+
 .clearall {
-  background: rgb(92, 180, 238);
+  background:  #8f48eb;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -115,6 +106,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-weight: lighter;
 }
 
 .add-form {
@@ -134,7 +126,8 @@ body {
   height: 40px;
   padding: 3px 7px;
   font-size: 17px;
-  margin-left: 7px;
+  margin-left: 5px;
+  margin-right: 6px;
 
 }
 .plusButton{
@@ -142,22 +135,22 @@ body {
    cursor: 'pointer' 
 }
 
-/* .form-control-check {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
-
-/* .form-control-check label {
-  flex: 2;
-  height: 20px;
+.delete {
+  background-color:#e84b3f;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  font-size: 20px;
+  cursor: pointer;
 }
-
-.form-control-check input {
-  flex: 2;
-  height: 20px;
-} */
-
+.addTodo {
+  background-color:#8f48eb;
+  border: none;
+  color: white;
+  padding: 10px 10px 7px 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
 .inputwidth input{
   height:40px;
   font-size: 100%;

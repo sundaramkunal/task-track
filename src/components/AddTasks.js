@@ -41,13 +41,13 @@ const AddTasks = ({ onAdd }) => {
                 />
 
 
-                <button style={{ color: 'rgb(92, 180, 238)', cursor: 'pointer', fontSize: 40, marginLeft: '5px' }}
+                <button className='addTodo'
                     type='submit'
                 > <BsPlusSquareFill
                     />
                 </button>
             </div>
-        </form>
+        </form >
     )
 }
 
@@ -84,3 +84,5 @@ export default AddTasks
                 />
                 </div> */
 }
+//color: ' #8f48eb', cursor: 'pointer', fontSize: 40, marginLeft: '5px' }}
+//style={{ backgroundColor: '#8f48eb', border: 'none', color: 'white', padding: '12px 16px', fontSize: '16px', cursor: 'pointer' }}
