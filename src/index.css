@@ -8,8 +8,7 @@
 
 body {
   font-family: sans-serif;
-  background-color:#56a7de;
-
+  background-color: #56a7de;
 }
 
 .container {
@@ -44,7 +43,6 @@ body {
   font-family: inherit;
 }
 
-
 .btn:focus {
   outline: none;
 }
@@ -78,7 +76,7 @@ body {
 }
 
 .clearall {
-  background:  #8f48eb;
+  background: #8f48eb;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -94,11 +92,11 @@ body {
   text-align: left;
   float: left;
   margin-left: 8px;
-  padding:13px;
+  padding: 13px;
   padding-left: 0px;
 }
 
-.task.reminder {
+.task.completed {
   border-left: 5px solid green;
 }
 
@@ -128,15 +126,14 @@ body {
   font-size: 17px;
   margin-left: 5px;
   margin-right: 6px;
-
 }
-.plusButton{
-  color: 'red';
-   cursor: 'pointer' 
+.plusButton {
+  color: "red";
+  cursor: "pointer";
 }
 
 .delete {
-  background-color:#e84b3f;
+  background-color: #e84b3f;
   border: none;
   color: white;
   padding: 10px 10px;
@@ -144,15 +141,15 @@ body {
   cursor: pointer;
 }
 .addTodo {
-  background-color:#8f48eb;
+  background-color: #8f48eb;
   border: none;
   color: white;
   padding: 10px 10px 7px 10px;
   font-size: 20px;
   cursor: pointer;
 }
-.inputwidth input{
-  height:40px;
+.inputwidth input {
+  height: 40px;
   font-size: 100%;
   text-align: left;
 }
